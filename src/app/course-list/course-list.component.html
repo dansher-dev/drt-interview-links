@@ -1,0 +1,10 @@
+<div>
+  <div class="title">Courses</div>
+  <app-search (searchChange)="onSearchFilter($event)"></app-search>
+  <div class="course-table">
+    <div *ngFor="let course of filteredCourses">
+      <app-course-row [course]="course">
+      </app-course-row>
+    </div>
+  </div>
+</div>
